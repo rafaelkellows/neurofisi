@@ -1,0 +1,1 @@
+function init(){this.start=function(txt){alert(txt)}}var init=new Init;init.start("Testando");

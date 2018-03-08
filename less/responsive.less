@@ -1,0 +1,35 @@
+/*******************************
+          RESPONSIVE
+*******************************/
+
+@media (max-width:800px){
+	body{
+		main{
+			&.coming{
+				section {
+					margin:0;  
+					p{
+						width:100%; padding: 0.6em 1.3em 0.7em 1.3em;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width:425px){
+	body{
+		main{
+			&.coming{
+				> h1{
+					width: 70%; margin: 5% 15% 0;
+				}
+				h2{
+					padding: 1em .5em;
+				}
+				footer{
+					padding: 1.5em 0;
+				}
+			}
+		}
+	}
+}

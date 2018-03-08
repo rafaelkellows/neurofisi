@@ -1,0 +1,53 @@
+﻿
+.transit(@properties: all, @secs: 0.3s){ 
+  -webkit-transition: @properties @secs; 
+  -o-transition: @properties @secs; 
+  transition: @properties @secs; 
+}
+.d-middle{ display: inline-block; vertical-align: middle; }
+.d-top{ display: inline-block; vertical-align: top; }
+.b-sizing{ box-sizing: border-box; }
+body,html{ 
+  background-color: #fff; font-size:100%; font-family: 'Arquitecta Book'; 
+  *{ color: #213C57;  }
+}
+body{
+  main{
+    max-width: 1024px; position: relative; margin: 0 auto;
+    &.coming{
+      > h1{
+        width: 336px; margin: 0 auto; .transit(all, 0.3s);
+        figure{
+          *{ width:100%; } 
+          figcaption{ display: none; }
+        }
+      }
+      h2{ 
+        font-family: 'Arquitecta Bold'; font-size: 2.3575em; color: #5F9B9E; text-align: center; padding: 1.4em 1em; .transit(padding, 0.3s);
+      }
+      section{
+        background-color: #F7F5F5; margin: 0 5.5em; .transit(margin, 0.3s);
+        p{ font-family: 'Arquitecta Light'; padding: 0.6em 0 0.7em 1.3em; width: 48.5%; .b-sizing; .d-middle; font-size: 1.2em; line-height: 1.45em; .transit(all, 0.3s); letter-spacing: -0.01em; }
+      }
+      footer{
+        padding: 3.7em 0 1.5em; text-align: center; .transit(padding, 0.3s);
+        h1{ font-family: 'Arquitecta Medium'; font-size: 2.3575em; text-transform: uppercase; font-size: 1.1em; }
+        address{ font-size: 0.96em; text-transform: uppercase; font-style:normal; padding: 0.5em; line-height: 1.4em; }
+        ul{
+          border-top: 1px solid #5F9B9E; margin-top: 1em;
+          li{ 
+            .d-middle; margin: 1.1em 1.5em 0 1.5em; 
+            a{ 
+              font-size: 1.3em; 
+              i,span{ .d-middle; }
+              i{ font-size: 1.1em; }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@import "import.less";

@@ -1,0 +1,134 @@
+.d-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.d-top {
+  display: inline-block;
+  vertical-align: top;
+}
+.b-sizing {
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #fff;
+  font-size: 100%;
+  font-family: 'Arquitecta Book';
+}
+body *,
+html * {
+  color: #213C57;
+}
+body main {
+  max-width: 1024px;
+  position: relative;
+  margin: 0 auto;
+}
+body main.coming > h1 {
+  width: 336px;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+body main.coming > h1 figure * {
+  width: 100%;
+}
+body main.coming > h1 figure figcaption {
+  display: none;
+}
+body main.coming h2 {
+  font-family: 'Arquitecta Bold';
+  font-size: 2.3575em;
+  color: #5F9B9E;
+  text-align: center;
+  padding: 1.4em 1em;
+  -webkit-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+}
+body main.coming section {
+  background-color: #F7F5F5;
+  margin: 0 5.5em;
+  -webkit-transition: margin 0.3s;
+  -o-transition: margin 0.3s;
+  transition: margin 0.3s;
+}
+body main.coming section p {
+  font-family: 'Arquitecta Light';
+  padding: 0.6em 0 0.7em 1.3em;
+  width: 48.5%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2em;
+  line-height: 1.45em;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  letter-spacing: -0.01em;
+}
+body main.coming footer {
+  padding: 3.7em 0 1.5em;
+  text-align: center;
+  -webkit-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+}
+body main.coming footer h1 {
+  font-family: 'Arquitecta Medium';
+  font-size: 2.3575em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+body main.coming footer address {
+  font-size: 0.96em;
+  text-transform: uppercase;
+  font-style: normal;
+  padding: 0.5em;
+  line-height: 1.4em;
+}
+body main.coming footer ul {
+  border-top: 1px solid #5F9B9E;
+  margin-top: 1em;
+}
+body main.coming footer ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1.1em 1.5em 0 1.5em;
+}
+body main.coming footer ul li a {
+  font-size: 1.3em;
+}
+body main.coming footer ul li a i,
+body main.coming footer ul li a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+body main.coming footer ul li a i {
+  font-size: 1.1em;
+}
+/*******************************
+          RESPONSIVE
+*******************************/
+@media (max-width: 800px) {
+  body main.coming section {
+    margin: 0;
+  }
+  body main.coming section p {
+    width: 100%;
+    padding: 0.6em 1.3em 0.7em 1.3em;
+  }
+}
+@media (max-width: 425px) {
+  body main.coming > h1 {
+    width: 70%;
+    margin: 5% 15% 0;
+  }
+  body main.coming h2 {
+    padding: 1em .5em;
+  }
+  body main.coming footer {
+    padding: 1.5em 0;
+  }
+}
