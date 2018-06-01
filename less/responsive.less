@@ -1,9 +1,133 @@
 /*******************************
           RESPONSIVE
 *******************************/
+@media (max-width:1020px){
+	body{
+		main{
+			.blockF > div dl{
+				margin: 1em 0 0;
+			}
+			&.home{
+				section{
+					&.highlights{
+						figure{
+							margin-right:0 !important;
+						}
+						aside{ 
+							width: auto; 
+							figure:first-child{
+								margin-right:.5em !important;
+							}
+						}
+					}
+				}
+			}
+			&.sobrenos{
+				.blockE > div > p{
+					width: 50.4%;
+				}
+				.blockE p + p + p + div figure{
+					margin: 0 0 0 2em;
+				}
+			}
+			&.quemsomos{
+				.blockD > div{
+					text-align: center; margin: 0;
+					dl{ margin-top: 0 !important; }
+				}
+			}
+		}
+	}
+}
 
+@media (max-width:670px){
+	body{
+		.blockA, .blockD, .blockE, .blockF {
+		  padding: 1em 0;
+		}
+		[class^="block"] > p, [class^="block"] > a{
+			padding: 0 0.5em;
+		}
+		[class^="block"] h1{
+			padding: 0.5em 0.5em 1em; text-align: center;
+		}
+		main{
+			overflow: hidden; height: 100%; width: 100%;
+			header{
+				ul{
+					font-size: 85%;
+					float: none; margin: 0 0 2.2em 0; 
+					li{ .d-middle; margin: 0 3% 0; }
+				}
+				h1{
+					width: 59.8%; margin: 1em auto;
+				}
+				nav{
+					position: absolute; top:0; right: 0; border:0; padding:0; 
+	        a{ 
+	          display:none;
+	          &:first-child{
+	            display:block; font-size:2em; margin: 0.6em 0.4em;
+	          }
+	        }
+					&.active{
+						width: 100%; background: #fff;
+						a{ display:block; }
+					}
+				}
+			}
+			&.home{
+				section{
+					&.highlights{
+						figure{
+							width: 100%;
+						}
+					}
+				}
+				.blockB {
+					article{
+						padding: 2.6em 2.6em 1.4em;
+						> div{
+							display:block; padding:1em 0 0; width: auto;
+							a{ float: none; }
+						}
+					}
+					> div, > section{
+						padding-left: 0;
+					}
+					> div figure, > section figure, body main footer div figure{
+						margin: 0 1em 2.3em;
+					}
+				}
+
+			}
+			&.sobrenos{
+				.blockE > div{
+					text-align:center;
+					> p{
+						width: auto;
+					}
+					figure{
+						margin: 1em 0;
+					}
+				}
+			}
+			&.oquefazemos .blockB article{
+				margin: 5.2em 1em 0; padding: 0.75em;
+			}
+		}
+	}
+}
 @media (max-width:800px){
 	body{
+		.blockE{
+			p{
+				padding: 0.25em 1em 0 !important;
+			}
+			> strong{
+				padding: 0.65em 0.7em 0.8em !important;
+			}
+		}
 		main{
 			&.coming{
 				section {
@@ -13,12 +137,32 @@
 					}
 				}
 			}
+			&.oquefazemos{
+				.blockF > div dl dd{
+					width: auto; margin: 0 1em 1em;
+				}
+			}
 		}
 	}
 }
 @media (max-width:425px){
 	body{
 		main{
+			.banner figcaption{
+				font-size:1.5em;
+			}
+			[class^="block"] dl{
+				margin: 2.6em 0;
+			}
+			header{
+				p, form{ width: 100%; text-align: center; }
+				p{ padding:.5em 0; text-align: left; }
+				form{ 
+					padding:.5em 0 1em; 
+					input.iClassA{ width: 80%; }
+				}
+				nav{ margin-top: 0; }
+			}
 			&.coming{
 				> h1{
 					width: 70%; margin: 5% 15% 0;
@@ -29,6 +173,20 @@
 				footer{
 					padding: 1.5em 0;
 				}
+			}
+			&.sobrenos{
+				.blockE{
+					> div figure{
+						width: 100%; margin: 1em 0 -1.6em 0  !important;
+						img{width: 100%;}
+					}
+					p + p + p + div figure{
+						margin: -1.6em 0 1em 0  !important;
+					}
+				}
+			}
+			&.oquefazemos .blockB > section{
+				margin: 0 -1em 2.4em;
 			}
 		}
 	}

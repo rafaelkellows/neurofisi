@@ -1,4 +1,16 @@
-﻿
+
+/* GERAL */
+body, html, div, span, a, ul, li, dl, dt, dd, section, header, p, form, fieldset, button, input, figure{
+  border: none; margin: 0; padding: 0; list-style: none; position: relative; text-decoration: none; outline: none; 
+}
+header, section, footer, aside, nav, main, article, figure, a, img, span, :after, :before { 
+  display: block; 
+}
+h1,h2,h3,h4,h5,h6,figure{
+  font-weight: normal !important; margin: 0;
+}
+html object{ display: none; }
+
 .transit(@properties: all, @secs: 0.3s){ 
   -webkit-transition: @properties @secs; 
   -o-transition: @properties @secs; 
@@ -7,13 +19,254 @@
 .d-middle{ display: inline-block; vertical-align: middle; }
 .d-top{ display: inline-block; vertical-align: top; }
 .b-sizing{ box-sizing: border-box; }
+.iClassA{
+  border-radius: .5em; background: #f7f5f6; border:1px solid #ccc; font-family: 'Arquitecta Book'; font-size:1em; padding:.15em .25em; width: 176px; .b-sizing; .transit(width, 0.3s);
+}
+.link{
+  color: #213C57;
+  .transit(color, 0.3s);
+  *{
+    color: #213C57;
+    .transit(color, 0.3s);
+  }
+  &:hover, &.active{
+    color: #9cd8da !important;
+    *{ color: #9cd8da !important; }
+  }
+}
+/*.blockA{*/
+[class^="block"]{
+  padding:1.5em .9em 0;
+  h1{ text-transform: uppercase; font-family: Arquitecta Bold; font-size: 1.83em; padding: 0.5em 2.9em 1em; letter-spacing: -0.01em; text-decoration: underline #5f9a9e; }
+  > p , > a{ color: #5f9a9e; font-size:2.2em; font-family: 'Arquitecta Bold'; line-height: 1.1em; margin-bottom: 1.3em; }
+  >div{ background: #f7f5f4; text-align:center; }
+  dl{
+    .d-top; margin: 2.6em 1.9em; width:254px; letter-spacing: -0.01em; background: #fff; 
+    dt{
+      h3{ display:none; }
+      figure{
+        figcaption{ font-size:1.6em; font-family: 'Arquitecta Medium'; text-align: left; padding: 0.6em 0.5em; line-height: 0.9em; }
+      }
+    }
+    dd{
+      font-size: 1.2em; text-align: left; padding: 0 0.6em 1.1em; line-height: 1.1em; border-bottom:2px solid #5f9a9e;
+      a{
+        &:after{
+          content: "\f054"; color: #9cd8da; font: normal normal normal 14px/1 FontAwesome; position:absolute; font-size: 1em; right: 0px; bottom: -4px;
+        }
+      }
+    }
+  }
+  &.chevron-right{
+    > p, > a{
+      &:after{
+        content: "\f054"; color: #9cd8da; font: normal normal normal 14px/1 FontAwesome; display: inline-block; font-size: 0.9em; margin-left: 0.4em;
+      }
+    }
+  }
+}
+.blockA{
+  padding: 1em .9em 0;
+}
+.blockB{
+  >div, >section{ 
+    background: none; text-align:center; padding-left: 2.3em; margin-bottom: 0.6em;
+    figure{ 
+      .d-top; margin: 0 2em 2.3em 0; .transit(margin, 0.3s);
+      a{ img{ opacity: 1; } }
+      figcaption{ 
+        position: absolute; top: 0; left:0; width: 100%; height: 100%; z-index: 1; opacity: 0; .transit(opacity, 0.3s);
+        &:before{
+          content:''; width: 0; height: 100%; .d-middle;
+        }
+        em{ text-transform: uppercase; font-size: 1.2em; font-family: 'Arquitecta Bold'; color: #5f9a9e; font-style:normal; position: absolute; top: 0.8em; z-index: 1; text-align: center; width: 100%; }
+        p, a{ .d-middle; text-decoration: underline #5f9a9e; z-index: 1; text-transform: uppercase; font-size: 1.2em; font-family: 'Arquitecta Bold'; padding: 0 1.25em;}
+        &:after{
+          content:''; background:#f7f5f4; opacity: .75; width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+        }
+      }
+      &:hover, &.active{
+        figcaption{ opacity: 1; }
+      }
+    }
+  }
+  article{
+    background: #f7f5f4; padding: 2.6em 3.45em 1.4em 3.45em;
+    figure{ 
+      .d-top; 
+      figcaption{ display:none; }
+    }
+    >div{
+      .d-top; width: calc(~'100% - 215px'); padding-left: 2.2em;
+      h3{ font-size: 2em; font-family: 'Arquitecta Medium'; letter-spacing: 0; line-height: 0.8em; text-decoration: underline #5f9a9e; }
+      p{ font-size: 1.2em; padding-top: 1.2em; line-height: 1.1em; }
+      a{ 
+        float:right; font-size: 1.52em; padding: 0.2em 0.7em 0.2em 0; line-height: 1.1em; font-family: 'Arquitecta Medium'; .link;
+        span{ .d-middle; }
+        &:after{
+          content: "\f054"; color: #9cd8da; font: normal normal normal 14px/1 FontAwesome; .d-middle; font-size: 0.9em; margin-left: 0.3em; margin-top: .3em;
+        }
+      }
+    }
+  }
+}
+.blockC{
+  >div { padding-bottom: 1em; }
+  dl{
+    background: none;
+    dt{
+      padding: 1em 2.2em 0.8em 1.1em; background: #fff;
+      h3{ display:block; font-size:2.28em; font-family: 'Arquitecta Bold'; color: #5f9a9e; text-align: left; line-height: 1em; }
+    }
+    dd{
+      font-size:1.78em; background: #fff; line-height: 1.075em; padding:0 0.6em 0.6em;
+    }
+    &:nth-child(1){
+      &:before{
+        content: ""; background: url('../images/icons/filosofia.png') no-repeat 0 0; width: 100px; height: 88px; margin:0 auto 1em;
+      }
+    }
+    &:nth-child(2){
+      &:before{
+        content: ""; background: url('../images/icons/filosofia.png') no-repeat -299px 0; width: 105px; height: 88px; margin:0 auto 1em;
+      }
+    }
+    &:nth-child(3){
+      &:before{
+        content: ""; background: url('../images/icons/filosofia.png') no-repeat -616px 0; width: 84px; height: 88px; margin:0 auto 1em;
+      }
+    }
+  }
+}
+.blockD:extend(.blockA){
+  >div{ 
+    text-align: left; margin: 0 1.9em; background: none;  
+    dl{ 
+      margin: 0 1.1em 2.6em; width:272px; background: #f7f5f6; 
+      figure{
+        figcaption{ 
+          text-transform: uppercase; font-size: 1.1em; padding: 0.8em 1.1em 0.6em; line-height: 1.1em;
+          strong{ font-size: 1.12em; font-weight:normal; display: block; text-decoration: underline #5f9a9e; padding-bottom: 0.3em; line-height: 1.1em; }
+          span{ font-size: 1.12em; font-weight:normal; display: block;}
+        }
+      }
+      dd{
+        padding: 0 1em 1.1em 1.1em;
+      }
+    }
+  }
+}
+.blockE:extend(.blockA){
+  p{
+    color: #213C57; font-family: 'Arquitecta Book'; padding: 0.25em 3.5em 0 1.7em; font-size: 1.82em; line-height: 1.05em; .transit(padding, 0.3s);
+  }
+  > strong{
+    color: #5f9a9e; padding: 0.65em 2.3em 0.8em 1.5em; font-size: 2.21em; line-height: 1.05em; display: block;
+  }
+  >p{ 
+    strong{ text-transform:uppercase; }
+  }
+  strong + p ,strong + p + p {
+    padding: 0.35em 2em 0 1.9em; font-size: 1.615em; margin-bottom: 0.55em;
+  }
+  strong + p + p + p{
+    color: #5f9a9e; font-size: 2.28em; padding: 0.6em 0.5em 0 1.38em; line-height: 1.15em; margin-bottom: 1.1em;
+    span{
+      font-size: 0.83em; display: inline;
+    }
+  }
+  >div{
+    padding: 1.6em 0;
+    >p{ padding: 0 0.5em 0 2.7em; width: 56.4%; line-height: 0.95em; .b-sizing; .d-middle; .transit(all, 0.3s); }
+    text-align: left;
+    figure{
+      .d-middle; .transit(all, 0.3s);
+      figcaption{ display:none; }
+    }
+    figure + p{
+      padding: 0 0.5em 0 2.7em; width: 56.4%;
+    }
+  }
+  p + p + p + div{
+    margin: 1em 0 1.5em 0;
+    figure{ margin: 0 0 0 5em; .transit(all, 0.3s); }
+    p{ 
+      padding: 0.2em 3.3em 0 1.7em; line-height: 1.05em; font-size: 1.625em; 
+      span{ color: #5f9a9e; font-style: normal; display: inline; font-family: 'Arquitecta Medium'; }
+    }
+  }
+  p + p + p + div + p{
+    padding: 0.25em 3em 0 1.95em; font-size: 1.61em; margin-bottom: 0;
+  }
+}
+.blockF:extend(.blockA){
+  >div{
+    padding-bottom: 2.5em; margin-bottom: 1.2em;
+    dl{ 
+      width: auto; background: none; margin: 1em 2.5em -1.1em 3.5em; .transit(margin, 0.3s);
+      dt{
+        .d-middle; width: 299px;
+        figure{
+          figcaption{ display:none; }
+        }
+      }
+      dd{
+        .d-middle; width: 53%; padding: 1.4em 0 0.4em; margin-bottom: 0.65em; margin-left: 2.1em;
+        p{
+          font-size: 1.36em; font-family: 'Arquitecta Book'; text-align: left; line-height: 1.05em;
+        }
+      }
+    }
+  }
+}
+.banner{
+  margin:0 auto 1em; max-width: 988px;
+  figcaption{ position: absolute; left: 0.78em; bottom: 0.43em; text-transform: uppercase; color: #fff; font-size: 4em; }
+  img{ width: 100%; }
+}
+
 body,html{ 
   background-color: #fff; font-size:100%; font-family: 'Arquitecta Book'; 
-  *{ color: #213C57;  }
+  *{ color: #213C57; }
 }
 body{
   main{
-    max-width: 1024px; position: relative; margin: 0 auto;
+    max-width: 1024px; position: relative; margin: 0 auto; 
+    header{
+      padding:.5em;
+      p{ 
+        font-size:1.45em; .d-top; width: 49.5%; margin:0 -3px 0 .2em; letter-spacing: -0.01em; height: 28px; font-family: 'Arquitecta Medium';
+        a{ .d-top; }
+      }
+      label,form{ 
+        .d-top; width: 50%; margin-right: -3px; text-align: right; 
+        i{ font-size: 1.7em !important; .d-middle; }
+        input{ .d-middle; }
+      }
+      ul{ 
+        float: left; margin: -14.5em 0 2.2em 0; text-align: center; .transit(margin, 0.3s);
+        li{ 
+          margin: 0 0 .4em 0; text-align: center; .transit(margin, 0.3s);
+          a{ font-size: 2.1em; }
+        }        
+      }
+      h1{
+        width: 391px; height: auto; margin: 0 auto 1.6em; .transit(all, 0.3s);
+        figure{ 
+          figcaption{ display:none; }
+          img{ width: 100%; }
+        }
+      }
+      nav{
+        border-top:1px solid #5f9a9e; border-bottom:1px solid #5f9a9e; margin: 2.25em 0 2.1em 0; padding:0 1.8em; text-align: center; .transit(all, 0.3s); background: none;
+        a{ 
+          .link; font-size:1.28em; text-transform: uppercase; font-family: 'Arquitecta Bold'; .d-middle; margin: 0.6em 1em; 
+          &:first-child{
+            font-size:2em; margin: 0.6em 0.4em; display: none;
+          }
+        }
+      }
+    }
     &.coming{
       > h1{
         width: 336px; margin: 0 auto; .transit(all, 0.3s);
@@ -46,7 +299,118 @@ body{
         }
       }
     }
-
+    &.home{
+      /*background: url("../images/psd/home.jpg") no-repeat 0 3px;*/
+      section{
+        &.highlights{
+          text-align:center;
+          figure{
+            .d-top; width:auto; .transit(width, 0.3s);
+            figcaption{ 
+              position: absolute; color: #fff; text-shadow: 2px 2px 4px #000000; text-align: left; width: 285px; line-height: 1.08em; font-size:1.81em; z-index: 1; font-family: 'Arquitecta Medium'; text-decoration: underline #5f9a9e; 
+              a{ color: #fff; text-shadow: 2px 2px 4px #000000; text-decoration: underline #5f9a9e; }
+            }
+            &:first-child{
+              margin-right: .5em; margin-bottom: .6em;
+              figcaption{ bottom: 21px; right: 2px; }
+            }
+            img{ width:100%; }
+          }
+          aside{ 
+            .d-top; width: 327px;
+            figure{
+              &:first-child{
+                margin-bottom: .6em; margin-right: 0;
+                figcaption{ top: 11px; left: 13px; right:auto; bottom: auto; }
+              }
+              &:last-child{
+                figcaption{ bottom: 20px; left: 13px; width: 300px; }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.filosofia{
+      /*background: url("../images/psd/filosofia.jpg") no-repeat 0 3px;*/
+    }
+    &.quemsomos{
+      /*background: url("../images/psd/quemsomos.jpg") no-repeat 0 -24px;*/
+    }
+    &.sobrenos{
+      /*background: url("../images/psd/sobrenos.jpg") no-repeat 0 0;*/
+    }
+    &.oquefazemos{
+      /*background: url("../images/psd/oquefazemos.jpg") no-repeat 0 0;*/
+      .blockB{
+        >section{
+          height: 139px; overflow: hidden; margin:0 2.9em 2.4em 2.9em; .transit(margin, 0.3s);
+          div{ width: 4000px; text-align: left; left: 0; position: relative; .transit(left, 0.3s); }
+          nav{
+            position: absolute; z-index: 2; width:100%; height:0; left:0;
+            a{
+              width: 37px; height: 139px; right:0; top:0; position: absolute; background: #fff;
+              &:before{
+                content: "\f054"; color: #9cd8da; font: normal normal normal 14px/1 FontAwesome; font-size: 1.3em; .d-middle;
+              }
+              span{ .d-middle; font-size:0; height: 100%; }
+              &:first-child{
+                right:auto; left:0;
+                &:before{
+                  content:"\f053";
+                }
+              }
+            }
+          }
+          figure{
+            figcaption{ text-align: center; }
+          }
+          
+        }
+        article{
+          padding: 1.7em 1.75em 1.4em 1.75em; margin: 5.2em 5em 0; position: relative; display:none; .transit(margin, 0.3s);
+          h2{ position: absolute; top: -1.9em; left: 0em; font-size: 1.9em; font-family: 'Arquitecta Bold'; color: #008d97; line-height: 0.8em; }
+          h3{ 
+            font-size: 1.54em; font-family: 'Arquitecta Bold'; padding: 1.1em 0; 
+            &.empty{ padding:.5em 0; }
+          }
+          h3 ~ p{ 
+            font-size: 1.2em; line-height: 1.1em; margin-right: 0.5em; padding-bottom: 0.7em; border-bottom: 2px solid #008d97; margin-bottom: 1.5em;
+            strong{ font-size: 1.1em; }
+          }
+          h2+p{
+            font-size: 1.4em; line-height: 1.1em;
+          }
+          p:last-child{
+            border-bottom: none; margin-bottom: 0;
+          }
+        }
+      }
+    }
+    footer{
+      padding: 2.9em 0; text-align: center;
+      div{
+        padding-bottom: 3.5em;
+        figure:extend(.blockB > div figure all){
+          margin: 0 0.2em 0.4em 0;
+          figcaption{
+            p, a{ color: #fff; text-decoration: none !important; font-family: 'Arquitecta Book' !important; }
+            &:after{
+              background: #13331b !important; opacity: .35 !important;
+            }
+          }
+        }
+      }
+      h1{ 
+        width: 240px; margin: 0 auto .9em;
+        img{ width:100%; }
+        figcaption{ display:none; }
+      }
+      address{ 
+        font-size: 1.15em; text-transform: uppercase; font-style:normal; padding: 0.5em 0.5em 1.7em; line-height: 1.3em; font-family: Arquitecta Medium; letter-spacing: 0.01em; border-bottom: 1px solid #5F9B9E; 
+        a{ text-transform: lowercase; .d-middle; font-size: 1.15em; margin-top: -0.4em; }
+      }
+    }
   }
 }
 
